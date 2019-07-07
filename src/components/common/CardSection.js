@@ -1,0 +1,27 @@
+import React from 'react';
+import { View } from 'react-native';
+
+const CardSection = (props) => {
+	return (
+		// Here you can pass in a custom style to override
+		// by making an array and passing props.style
+		<View style={[styles.containerStyle, props.style]}>
+			{props.children}
+		</View>
+	);
+};
+
+const styles = {
+	containerStyle: {
+		borderBottomWidth: 1,
+		padding: 5,
+		backgroundColor: '#fff',
+		justifyContent: 'flex-start',
+		flexDirection: 'row',
+		borderColor: '#ddd',
+		position: 'relative',
+		display: 'flex'
+	}
+};
+
+export { CardSection };
